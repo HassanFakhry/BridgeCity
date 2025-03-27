@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --background-color: #f4f6f7;
+  --white-team-bg: #ffffff;
+  --red-team-bg: #ffebee;
+  --blue-team-bg: #e3f2fd;
+  --yellow-team-bg: #fff3e0;
+  --black-team-bg: #f5f5f5;
+}
+
+.our-team {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  padding: 37.5px 15px;
+  min-height: 75vh;
+}
+
+.our-team > h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 2.25rem;
+  margin-bottom: 37.5px;
+  position: relative;
+}
+
+.our-team > h1::after {
+  content: '';
+  position: absolute;
+  bottom: -7.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.team-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 22.5px;
+}
+
+.team-section {
+  background-color: #ffffff;
+  border-radius: 11.25px;
+  box-shadow: 0 7.5px 22.5px rgba(0,0,0,0.1);
+  padding: 22.5px;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-section:hover {
+  transform: translateY(-7.5px);
+}
+
+.team-section.red {
+  background-color: var(--red-team-bg);
+}
+
+.team-section.blue {
+  background-color: var(--blue-team-bg);
+}
+
+.team-section.yellow {
+  background-color: var(--yellow-team-bg);
+}
+
+.team-section.white {
+  background-color: var(--white-team-bg);
+}
+
+.team-section.black {
+  background-color: var(--black-team-bg);
+}
+
+.team-name {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 1.35rem;
+  margin-bottom: 18.75px;
+  position: relative;
+}
+
+.team-name::after {
+  content: '';
+  position: absolute;
+  bottom: -7.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37.5px;
+  height: 2.25px;
+  background-color: var(--primary-color);
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.team-member {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 7.5px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3.75px 11.25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.015);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.member-name {
+  color: var(--secondary-color);
+  font-size: 0.975rem;
+  margin-bottom: 7.5px;
+}
+
+.member-title {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 7.5px;
+}
+
+.member-bio {
+  color: var(--text-color);
+  font-size: 0.675rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .team-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .our-team > h1 {
+    font-size: 1.875rem;
+  }
+  
+  .team-name {
+    font-size: 1.125rem;
+  }
+}
