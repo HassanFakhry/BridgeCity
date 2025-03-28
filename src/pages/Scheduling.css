@@ -17,6 +17,30 @@
   gap: 20px;
 }
 
+.warning-message {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background with transparency */
+  color: rgba(255, 0, 0, 0.8); /* Slightly faded red text */
+  padding: 10px;
+  border-left: 4px solid rgba(255, 0, 0, 0.8); /* Red left border for emphasis */
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.warning-link {
+  color: rgba(255, 0, 0, 0.9);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.warning-link:hover {
+  color: red;
+}
+
 /* Grouping form elements */
 .form-group {
   display: flex;

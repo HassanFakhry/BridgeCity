@@ -111,24 +111,30 @@ const Scheduling = ({ onBack, formData }) => {
             </div>
 
             <div className="form-group">
-              <label>Select Time Slots:</label>
-              <div className="checkbox-group">
-                {timeOptions.map((timeOption) => (
-                  <div key={timeOption} className={`checkbox-item ${isSlotBooked(timeOption) ? 'disabled-slot' : ''}`}>
-                    <input
-                      type="checkbox"
-                      id={timeOption}
-                      value={timeOption}
-                      checked={selectedSlots.includes(timeOption)}
-                      onChange={() => handleSlotChange(timeOption)}
-                      disabled={isSlotBooked(timeOption)}
-                    />
-                    <label htmlFor={timeOption}>{timeOption}</label>
-                  </div>
-                ))}
-              </div>
-              {errors.slots && <div className="error-message">{errors.slots}</div>}
-            </div>
+  <label>Select Time Slots:</label>
+  <p className="warning-message">
+    ⚠️ <strong>Important Notice:</strong> Ensure you give us enough time to clean or, we may be unable to fulfill your request, or additional charges may apply.  
+    <a href="/Info" className="warning-link"> See info page for details.</a>
+  </p>
+  <div className="checkbox-group">
+    {timeOptions.map((timeOption) => (
+      <div key={timeOption} className={`checkbox-item ${isSlotBooked(timeOption) ? 'disabled-slot' : ''}`}>
+        <input
+          type="checkbox"
+          id={timeOption}
+          value={timeOption}
+          checked={selectedSlots.includes(timeOption)}
+          onChange={() => handleSlotChange(timeOption)}
+          disabled={isSlotBooked(timeOption)}
+        />
+        <label htmlFor={timeOption}>{timeOption}</label>
+      </div>
+    ))}
+  </div>
+  {errors.slots && <div className="error-message">{errors.slots}</div>}
+</div>
+
+
 
             {selectedSlots.length > 0 && (
               <div className="cost-info">
