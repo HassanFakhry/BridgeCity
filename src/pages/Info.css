@@ -1,0 +1,96 @@
+.container {
+    width: 50%; /* Take up 50% of the screen width */
+    max-width: 800px; /* Limit the maximum width to 800px */
+    min-height: 300px; /* Set a minimum height to avoid it getting too small */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
+}
+
+.tos-container,
+.payment-info-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Reduce padding to avoid overflow */
+    height: auto; /* Let these containers grow based on content */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Reduce margin */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px; /* Reduce padding */
+}
+
+.header h1 {
+    color: #333;
+    font-size: 20px; /* Reduce the font size for the header */
+    margin: 0;
+}
+
+.toggle-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* Reduce padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #357abd;
+}
+
+.tos-content p,
+.payment-info-content p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px; /* Reduce font size for better readability */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 80%; /* Take up more space on smaller screens */
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 18px; /* Smaller header size for small screens */
+    }
+
+    .toggle-button {
+        padding: 6px 10px; /* Smaller button */
+    }
+
+    .tos-content p,
+    .payment-info-content p {
+        font-size: 12px; /* Adjust paragraph font size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Take up most of the screen */
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 16px; /* Even smaller header size */
+    }
+
+    .toggle-button {
+        padding: 5px 8px; /* Even smaller button */
+    }
+
+    .tos-content p,
+    .payment-info-content p {
+        font-size: 12px; /* Maintain smaller text size */
+    }
+}
