@@ -1,14 +1,16 @@
+/* Default styling */
 .container {
     width: 50%; /* Take up 50% of the screen width */
     max-width: 800px; /* Limit the maximum width to 800px */
     min-height: 300px; /* Set a minimum height to avoid it getting too small */
     height: auto; /* Allow height to adjust based on content */
-    margin: 0 auto;
+    margin: 20px auto 0; /* Initial margin from the top */
     padding: 20px;
     font-family: Arial, sans-serif;
     box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
 }
 
+/* Content boxes */
 .tos-container,
 .payment-info-container {
     background-color: #f9f9f9;
@@ -18,6 +20,7 @@
     height: auto; /* Let these containers grow based on content */
 }
 
+/* Header styles */
 .header {
     display: flex;
     justify-content: space-between;
@@ -33,6 +36,7 @@
     margin: 0;
 }
 
+/* Button styles */
 .toggle-button {
     background-color: #4a90e2;
     color: white;
@@ -47,6 +51,7 @@
     background-color: #357abd;
 }
 
+/* Paragraph text */
 .tos-content p,
 .payment-info-content p {
     color: #666;
@@ -59,6 +64,7 @@
     .container {
         width: 80%; /* Take up more space on smaller screens */
         padding: 15px;
+        margin-top: 40px; /* Push down slightly */
     }
 
     .header h1 {
@@ -79,6 +85,7 @@
     .container {
         width: 90%; /* Take up most of the screen */
         padding: 10px;
+        margin-top: 60px; /* Push down even more */
     }
 
     .header h1 {

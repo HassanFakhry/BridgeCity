@@ -166,21 +166,22 @@ body {
 @media (max-width: 600px) {
   .register-container {
     width: 90%;
-    padding: 20px;
+    padding: 60px; /* Further increased padding */
   }
   
   .toggle-button {
-    padding: 10px;
-    margin: 5px;
+    padding: 20px; /* Further increased padding */
+    margin: 20px; /* Further increased margin */
   }
 
   .form-control {
     font-size: 14px;
-    padding: 10px;
+    padding: 20px; /* Further increased padding */
   }
 
   .register-button, .login-button, .forgot-password-button, .signup-button {
-    padding: 10px 15px;
+    padding: 20px 30px; /* Further increased padding */
+    margin: 20px; /* Further increased margin */
   }
   
   .scheduled-cleans-grid {
